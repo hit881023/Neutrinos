@@ -1,0 +1,204 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6068,        195]
+NotebookOptionsPosition[      5510,        174]
+NotebookOutlinePosition[      5943,        191]
+CellTagsIndexPosition[      5900,        188]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\:ff08", 
+  RowBox[{
+  "*", "the", " ", "standard", " ", "PDG", " ", "parameterization", " ", "of",
+    " ", "cosmic", " ", "neutrino", " ", "propagation", " ", "matrix", "*"}], 
+  "\:ff09"}]], "Input",
+ CellChangeTimes->{{3.6197969758936768`*^9, 3.619796975996704*^9}, {
+  3.619797063168263*^9, 3.619797096194524*^9}}],
+
+Cell[BoxData[
+ RowBox[{"U", "=", GridBox[{
+    {
+     RowBox[{
+      RowBox[{"Cos", "[", "theta21", "]"}], "*", 
+      RowBox[{"Cos", "[", "theta13", "]"}]}], 
+     RowBox[{
+      RowBox[{"Sin", "[", "theta21", "]"}], "*", 
+      RowBox[{"Cos", "[", "theta13", "]"}]}], 
+     RowBox[{
+      RowBox[{"Sin", "[", "theta13", "]"}], "*", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], "*", "delta2"}], "]"}]}]},
+    {
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"Sin", "[", "theta21", "]"}]}], "*", 
+       RowBox[{"Cos", "[", "theta32", "]"}]}], "-", 
+      RowBox[{
+       RowBox[{"Cos", "[", "theta21", "]"}], "*", 
+       RowBox[{"Sin", "[", "theta32", "]"}], "*", 
+       RowBox[{"Sin", "[", "theta13", "]"}], "*", 
+       RowBox[{"Exp", "[", 
+        RowBox[{"I", "*", "delta2"}], "]"}]}]}], 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Cos", "[", "theta21", "]"}], "*", 
+       RowBox[{"Cos", "[", "theta32", "]"}]}], "-", 
+      RowBox[{
+       RowBox[{"Sin", "[", "theta21", "]"}], "*", 
+       RowBox[{"Sin", "[", "theta32", "]"}], "*", 
+       RowBox[{"Sin", "[", "theta13", "]"}], "*", 
+       RowBox[{"Exp", "[", 
+        RowBox[{"I", "*", "delta2"}], "]"}]}]}], 
+     RowBox[{
+      RowBox[{"Sin", "[", "theta32", "]"}], "*", 
+      RowBox[{"Cos", "[", "theta13", "]"}]}]},
+    {
+     RowBox[{
+      RowBox[{
+       RowBox[{"Sin", "[", "theta21", "]"}], "*", 
+       RowBox[{"Sin", "[", "theta32", "]"}]}], "-", 
+      RowBox[{
+       RowBox[{"Cos", "[", "theta21", "]"}], "*", 
+       RowBox[{"Cos", "[", "theta32", "]"}], "*", 
+       RowBox[{"Sin", "[", "theta13", "]"}], "*", 
+       RowBox[{"Exp", "[", 
+        RowBox[{"I", "*", "delta2"}], "]"}]}]}], 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"Cos", "[", "theta21", "]"}]}], "*", 
+       RowBox[{"Sin", "[", "theta32", "]"}]}], "-", 
+      RowBox[{
+       RowBox[{"Sin", "[", "theta21", "]"}], "*", 
+       RowBox[{"Cos", "[", "theta32", "]"}], "*", 
+       RowBox[{"Sin", "[", "theta13", "]"}], "*", 
+       RowBox[{"Exp", "[", 
+        RowBox[{"I", "*", "delta2"}], "]"}]}]}], 
+     RowBox[{
+      RowBox[{"Cos", "[", "theta32", "]"}], "*", 
+      RowBox[{"Cos", "[", "theta13", "]"}]}]}
+   }]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"U11", "=", 
+   RowBox[{"U", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+  RowBox[{"U12", "=", 
+   RowBox[{"U", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";", 
+  RowBox[{"U13", "=", 
+   RowBox[{"U", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "3"}], "]"}], "]"}]}], ";", 
+  RowBox[{"U21", "=", 
+   RowBox[{"U", "[", 
+    RowBox[{"[", 
+     RowBox[{"2", ",", "1"}], "]"}], "]"}]}], ";", 
+  RowBox[{"U22", "=", 
+   RowBox[{"U", "[", 
+    RowBox[{"[", 
+     RowBox[{"2", ",", "2"}], "]"}], "]"}]}], ";", 
+  RowBox[{"U23", "=", 
+   RowBox[{"U", "[", 
+    RowBox[{"[", 
+     RowBox[{"2", ",", "3"}], "]"}], "]"}]}], ";", 
+  RowBox[{"U31", "=", 
+   RowBox[{"U", "[", 
+    RowBox[{"[", 
+     RowBox[{"3", ",", "1"}], "]"}], "]"}]}], ";", 
+  RowBox[{"U32", "=", 
+   RowBox[{"U", "[", 
+    RowBox[{"[", 
+     RowBox[{"3", ",", "2"}], "]"}], "]"}]}], ";", 
+  RowBox[{"U33", "=", 
+   RowBox[{"U", "[", 
+    RowBox[{"[", 
+     RowBox[{"3", ",", "3"}], "]"}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"U2", "=", GridBox[{
+    {
+     RowBox[{"U11", "*", 
+      RowBox[{"Conjugate", "[", "U11", "]"}]}], 
+     RowBox[{"U12", "*", 
+      RowBox[{"Conjugate", "[", "U12", "]"}]}], 
+     RowBox[{"U13", "*", 
+      RowBox[{"Conjugate", "[", "U13", "]"}]}]},
+    {
+     RowBox[{"U21", "*", 
+      RowBox[{"Conjugate", "[", "U21", "]"}]}], 
+     RowBox[{"U22", "*", 
+      RowBox[{"Conjugate", "[", "U22", "]"}]}], 
+     RowBox[{"U23", "*", 
+      RowBox[{"Conjugate", "[", "U23", "]"}]}]},
+    {
+     RowBox[{"U31", "*", 
+      RowBox[{"Conjugate", "[", "U31", "]"}]}], 
+     RowBox[{"U32", "*", 
+      RowBox[{"Conjugate", "[", "U32", "]"}]}], 
+     RowBox[{"U33", "*", 
+      RowBox[{"Conjugate", "[", "U33", "]"}]}]}
+   }]}]], "Input",
+ CellChangeTimes->{{3.597774142061771*^9, 3.5977742641237526`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"P", "=", 
+  RowBox[{"U2", ".", 
+   RowBox[{"Transpose", "[", "U2", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.597774268540005*^9, 3.597774280150669*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.619307333596842*^9, 3.619307336861641*^9}}],
+
+Cell[BoxData[
+ RowBox[{"MatrixForm", "[", "P", "]"}]], "Input",
+ CellChangeTimes->{{3.597774359958234*^9, 3.597774366414603*^9}, {
+  3.619307360032075*^9, 3.6193073603809347`*^9}}]
+},
+WindowSize->{707, 615},
+WindowMargins->{{270, Automatic}, {32, Automatic}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 343, 7, 31, "Input"],
+Cell[903, 29, 2248, 64, 83, "Input"],
+Cell[3154, 95, 1069, 37, 63, "Input"],
+Cell[4226, 134, 822, 24, 63, "Input"],
+Cell[5051, 160, 177, 4, 28, "Input"],
+Cell[5231, 166, 92, 1, 28, "Input"],
+Cell[5326, 169, 180, 3, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
